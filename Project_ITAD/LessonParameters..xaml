@@ -1,0 +1,53 @@
+﻿<Window x:Class="Project_ITAD.LessonParameters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_ITAD"
+        mc:Ignorable="d"
+        Title="Lesson Parameters" Height="300" Width="186.174" ResizeMode="NoResize" Background="#FF2D2D30">
+    <Grid>
+        <StackPanel Margin="0,0,0,0">
+            <TextBox x:Name="Element_name" TextWrapping="Wrap" FontSize="24" TextAlignment="Center" Background="#FF2D2D30" Foreground="White"/>
+            <Label Content="Text position" Foreground="#FFEAEAEA"/>
+            <ComboBox x:Name="Text_position_horizontal"  ItemsSource="{Binding TextAligmentListHorizontal}" SelectedItem="{Binding SelectedTextAligmentHorizontal}" Foreground="White" Background="#FF292929" BorderBrush="#FF292929">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <ComboBox x:Name="Text_position_vertical"  ItemsSource="{Binding TextAligmentListVertical}" SelectedItem="{Binding SelectedTextAligmentVertical}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Label Content="Text Color" Foreground="#FFEAEAEA"/>
+            <ComboBox x:Name="Text_color" ItemsSource="{Binding ColorsList}" SelectedItem="{Binding SelectedColor2}" Foreground="White" Background="#FF292929" BorderBrush="#FF292929">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="{Binding}">
+                            <TextBlock Text="{Binding}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Label Content="BackGround Color" Foreground="#FFEAEAEA"/>
+
+            <ComboBox x:Name="Background_color" ItemsSource="{Binding ColorsList}" SelectedItem="{Binding SelectedColor1}" Background="#FF3E3E42" BorderBrush="#FF1C1C1C" Foreground="White">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="{Binding}">
+                            <TextBlock Text="{Binding}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Content="Save" Click="Button_Click" Background="#FF1B1B1C" Foreground="#FFEDEDED"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

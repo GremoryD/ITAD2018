@@ -1,0 +1,57 @@
+﻿<Window x:Class="Project_ITAD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_ITAD"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="507" Width="674" Background="#FF3F3F46" Foreground="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Menu  Grid.Column="0" Grid.ColumnSpan="5" Foreground="#FF2D2D30" Background="#FF2D2D30">
+            <Button x:Name="NewEvent" Content="New" Background="#FF2D2D30" Foreground="White" BorderBrush="{x:Null}" FontFamily="Verdana" Click="NewEvent_Click"/>
+
+            <Button x:Name="Save_button" Content="Save" Background="#FF2D2D30" Foreground="White" BorderBrush="{x:Null}" FontFamily="Verdana" Click="Save_button_Click"/>
+            <Button x:Name="Open_button" Content="Open" Background="#FF2D2D30" Foreground="White" BorderBrush="{x:Null}" FontFamily="Verdana" Click="Open_button_Click"/>
+            <Button Content="Settings" Background="#FF2D2D30" Foreground="White" BorderBrush="{x:Null}" FontFamily="Verdana"/>
+            <Button x:Name="About" Content="About" Background="#FF2D2D30" Foreground="White" BorderBrush="{x:Null}" FontFamily="Verdana" Click="About_Click"/>
+            <Button x:Name="Genareta" Content="Generate" Background="#FF2D2D30" Foreground="White" BorderBrush="{x:Null}" FontFamily="Verdana" Click="Genareta_Click"/>
+        </Menu>
+        <Grid x:Name="ElementComponents"  Grid.Column="0" Grid.Row="1"  Background="#FF252526" IsEnabled="False" >
+            <StackPanel Margin="0,10,0,0" VerticalAlignment="Top">
+                <Button x:Name="Add_Day" Content="Add Day" Margin="10,0,10,2" VerticalAlignment="Top" BorderBrush="#FF1E1E1E" Background="#FF333337" Foreground="White" FontFamily="Consolas" FontSize="14" Click="Add_Day_Click"/>
+                <Button x:Name="DeleteDayButton" Content="Delete Day" Margin="10,0,10,2" VerticalAlignment="Top" BorderBrush="#FF1E1E1E" Background="#FF333337" Foreground="White" FontFamily="Consolas" FontSize="14" Click="DeleteDayButton_Click"/>
+                <Button x:Name="Add_TimeLine_button" Content="Add time line" Margin="10,0,10,2" VerticalAlignment="Top" BorderBrush="#FF1E1E1E" Background="#FF333337" Foreground="White" FontFamily="Consolas" FontSize="14" ContentStringFormat="Add time line" Click="Add_TimeLine_button_Click"/>
+                <Button x:Name="Add_Lesson_Button" Content="Add lesson" Margin="10,0,10,2" VerticalAlignment="Top" BorderBrush="#FF1E1E1E" Background="#FF333337" Foreground="White" FontFamily="Consolas" FontSize="14" Click="Add_Lesson_Button_Click"/>
+                <Button x:Name="Add_Column" Content="Add Column" Margin="10,0,10,2" VerticalAlignment="Top" BorderBrush="#FF1E1E1E" Background="#FF333337" Foreground="White" FontFamily="Consolas" FontSize="14" Click="Add_Column_Click"/>
+                <Button x:Name="Add_Row" Content="Add Row" Margin="10,0,10,2" VerticalAlignment="Top" BorderBrush="#FF1E1E1E" Background="#FF333337" Foreground="White" FontFamily="Consolas" FontSize="14" Click="Add_Row_Click"/>
+
+            </StackPanel>
+
+        </Grid>
+        <GridSplitter Grid.Column="1" Grid.Row="1" ShowsPreview="False" Width="3"
+        HorizontalAlignment="Center" VerticalAlignment="Stretch" Background="#FF686868" />
+        <Grid x:Name="MainGrid"  Grid.Column="2" Grid.Row="1" Background="#FF252526" >
+ 
+        </Grid>
+        <GridSplitter Grid.Column="3" Grid.Row="1"  ShowsPreview="False" Width="3"
+        HorizontalAlignment="Center" VerticalAlignment="Stretch" Background="#FF686868" />
+        <Grid  Grid.Column="4" Grid.Row="1" Background="#FF252526" >
+            <StackPanel Margin="10" x:Name="Parameters"/>
+        </Grid>
+        <StatusBar Grid.ColumnSpan="5" Margin="0" Grid.Row="2" Background="#FF252526" Foreground="White">
+            <Button Content="DayStart" FontFamily="Tahoma" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="11"/>
+        </StatusBar>
+    </Grid>
+</Window>
